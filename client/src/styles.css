@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+*{
+    box-sizing: border-box;
+    font-family: Garamond;  
+}
+
+.navbar{
+    padding:25px;
+}
+  
+  html,body{
+    height: 100%;
+    background: linear-gradient(180deg, rgba(70, 64, 64, 0) 0%, #BCB0B0 100%);
+    
+}
+
+
+.btn-outline-secondary:not(.dropdown-main){
+    border: none;
+}
+
+.sign-up::before{
+    content:""; 
+    border:1px solid #cac4c4;
+    border-width: 1px 1px 0 0;
+    position:absolute; 
+    right:-3px; 
+    top:0; 
+    height:100%;
+  }
