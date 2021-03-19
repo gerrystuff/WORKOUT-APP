@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 
 import IndexRoute from './routes/indexRoute'
+import TrainingRoute from './routes/trainingRoute'
 
 class Server {
     
@@ -30,6 +31,7 @@ class Server {
 
     routes():void{
         this.app.use('/',IndexRoute);
+        this.app.use('/api/trainings',TrainingRoute)
     }
     
 }

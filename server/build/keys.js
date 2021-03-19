@@ -5,7 +5,7 @@ exports.default = {
         user: 'foo',
         password: '3125',
         server: 'localhost\\SQLEXPRESS',
-        database: 'TRAINING_APP',
+        database: 'trainingapp',
         options: {
             enableArithAbort: true,
         },

@@ -1,0 +1,113 @@
+<div class="col-md-8 p-3" *ngFor="let training of trainings">
+    <div class="card">
+        <div class="card-header bg-dark text-white ">
+            <h3> Training # {{training.Entrenamiento}}</h3>
+            <h3> Secuence </h3>
+            <h3> Record </h3>
+        </div>
+
+        <div class="card-body" *ngFor='let serie of training.Series'>
+            
+            <div class='container card-header-mine'>
+                    <h4>
+                        {{serie.Nombre}}
+                    </h4>
+                    <h4 style="text-align: center;">
+                        {{serie.Secuencia}}
+                    </h4>
+                    <h4 style="text-align: center; padding-left: 2rem;">
+                        23:03
+                    </h4>
+            </div>
+
+            
+          <hr>
+          <div class='card-exercises' >
+            <div *ngFor="let ejercicio of serie.Ejercicios" style="text-align: center;">
+             <p>
+
+                 {{ejercicio.Nombre}}
+             </p>
+                <p>
+                    {{ejercicio.Repeticiones}}
+                </p>
+            </div>                
+            </div>
+            <hr>
+        </div>
+
+        <div>
+            <div class="card-data bg-dark text-white ">
+                <h3 style="text-align: center; width: 100%;">Data</h3>
+            </div>
+            <div class='card-body'>
+                <div class="container" >
+                    <div class="row p-3" style= " width: 100">
+                            <div class="col-1 muscle-title">
+                                Muscles
+                            </div>
+
+                            <div class="col-11 card-muscles">
+                                <ng-container *ngFor="let serie of training.Series">
+                                    <p *ngFor="let musculo of serie.Musculos">
+                                        {{musculo}}
+                                    </p>
+                                </ng-container>
+                            </div>
+                    </div>
+
+                    <div class="row p-3" style= " width: 100">
+                        <div class="col-1 muscle-title" >
+                            Intensity
+                        </div>
+
+                        <div class='col-11' style="text-align: center;">
+                                <p>
+                                    Medium-High
+                                </p>
+                        </div>
+                    </div>
+
+                    <div class="row p-3" style= " width: 100">
+                        <div class="col-1 muscle-title" >
+                            Demo
+                        </div>
+
+                        <div class='col-11' style="text-align: center;">
+                                <p>
+                                    Choose Exercise
+                                </p>
+                        </div>
+                    </div>
+
+                    <div class="row p-3" style= " width: 100">
+                        <div class="col-1 muscle-title" >
+                            Info
+                        </div>
+
+                        <div class='col-11' style="text-align: center;">
+                                <p>
+                                    No info
+                                </p>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- <div class="card bg-light mb-3"*ngFor="let training of trainings" style="max-width: 18rem;">
+    <div class="card-header"> {{training.Entrenamiento}}</div>
+    <div class="card-body" *ngFor='let serie of training.Series'>
+      <h5 class="card-title">{{serie.Serie}}</h5>
+      <p class="card-text"  *ngFor="let ejercicio of serie.Ejercicios">{{ejercicio.Ejercicio}}</p>
+    </div>
+  </div> -->
